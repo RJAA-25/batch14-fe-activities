@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imPULSE - Registration Form</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <main>
+        <!-- Design Content-->
+        <div id="design-container">
+            <div class="left">
+                <img src="https://images.unsplash.com/photo-1588445396150-9b318274c76b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                    alt="">
+            </div>
+            <div class="right">
+                <div class="top">
+                    <img src="https://images.unsplash.com/photo-1583195590841-926af5f7431e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=706&q=80"
+                        alt="">
+                </div>
+                <div class="bot">
+                    <img src="https://images.unsplash.com/photo-1467647160393-708009aefd5c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                        alt="">
+                </div>
+            </div>
+
+            <!-- Header -->
+            <div class="header">
+                <p id="description">Got nothing to do?</p>
+                <h1 id="title">act on <span>imPULSE</span></h1>
+                <p>We'll send you something to do!</p>
+            </div>
+        </div>
+
+        <!-- Form Content-->
+        <div id="form-container">
+            <div class="half">
+                <!-- Profile -->
+                <div class="profile">
+                    <!-- Form -->
+                    <form action="#" id="survey-form">
+                        <fieldset>
+                            <legend>PROFILE</legend>
+                            <!-- Full Name -->
+                            <label for="name" id="name-label">Full Name <input type="text" id="name" name="fullName"
+                                    placeholder="Juan dela Cruz" required></label>
+                            <!-- Birdate -->
+                            <label for="birthdate">Birthdate <input type="date" id="birthdate" required></label>
+                        </fieldset>
+                </div>
+
+                <!-- Contact -->
+                <div class="contact">
+                    <fieldset>
+                        <legend>CONTACT</legend>
+                        <!-- Email -->
+                        <label for="email" id="email-label">Email <input type="email" id="email" name="email"
+                                placeholder="juan4all@gmail.com" required></label>
+                        <!-- Contact # -->
+                        <label for="phone">Contact # <input type="tel" id="phone" name="phone"
+                                pattern="[0][9][0-9]{2}-[0-9]{3}-[0-9]{4}" placeholder="09XX-XXX-XXXX" required></label>
+                    </fieldset>
+                </div>
+
+                <!-- Address -->
+                <div class="address">
+                    <fieldset>
+                        <legend>ADDRESS</legend>
+                        <!-- Country -->
+                        <label for="country">Country <input type="text" id="country" name="country"
+                                placeholder="Philippines" required></label>
+                        <!-- Province / State -->
+                        <label for="province-state">Province / State <input type="text" id="province-state"
+                                name="province-state" placeholder="Negros Oriental" required></label>
+                        <!-- City / Town -->
+                        <label for="city-town">City / Town <input type="text" id="city-town" name="city-town"
+                                placeholder="Dumaguete" required></label>
+                        <!-- ZIP Code -->
+                        <label for="zip">ZIP Code <input type="text" id="zip" name="zip" placeholder="6200"
+                                required></label>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="half">
+                <!-- Notification -->
+                <div class="notification">
+                    <fieldset>
+                        <legend id="notice">NOTICE</legend>
+                        <span>imPULSE sends notifcations to members about task updates and scheduling. How should
+                            we contact you?</span>
+                        <label for="notif-email"><input type="checkbox" id="notif-email" name="notif-choice">
+                            Email</label>
+                        <label for="notif-sms"><input type="checkbox" id="notif-sms" name="notif-choice">
+                            SMS</label>
+                    </fieldset>
+                </div>
+
+                <!-- Task Setup -->
+                <div class="task">
+                    <fieldset>
+                        <legend>TASK SETUP</legend>
+                        <!-- Difficulty -->
+                        <div class="difficulty">
+                            <label for="dropdown">Difficulty <select name="difficulty" id="dropdown" required>
+                                    <option value="" selected><i>--Select difficulty--</i></option>
+                                    <option value="easy">Easy</option>
+                                    <option value="normal">Normal</option>
+                                    <option value="hard">Hard</option>
+                                    <option value="challenge">Challenge</option>
+                                </select></label>
+
+                        </div>
+                        <!-- Frequency -->
+                        <div class="frequency">
+                            <label for="number" id="number-label">Frequency <input type="number" id=number
+                                    placeholder="Tasks per day (max: 10)" min="1" max="10" required></label>
+                        </div>
+                        <!-- Schedule -->
+                        <div class="schedule">
+                            <span>Schedule</span>
+                            <div>
+                                <label for="morning"><input type="radio" name="sched-choice" id="morning">
+                                    Morning</label><br>
+                                <label for="afternoon"><input type="radio" name="sched-choice" id="afternoon">
+                                    Afternoon</label><br>
+                                <label for="evening"><input type="radio" name="sched-choice" id="evening">
+                                    Evening</label><br>
+                                <label for="surprise"><input type="radio" name="sched-choice" id="surprise">
+                                    Surprise
+                                    Me!</label>
+                            </div>
+                        </div>
+                        <!-- Start Date -->
+                        <div class="startdate">
+                            <label for="start-date">Start Date <input type="date" id="start-date" required></label>
+                        </div>
+                        <!-- Experience -->
+                        <div class="experience">
+                            <label for="experience">Anything particular you want to experience?</label>
+                            <textarea name="" id="experience" cols="30" rows="5"
+                                placeholder="Tell us more.."></textarea>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Submit -->
+                <div class="submit">
+                    <input type="submit" value="REGISTER">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

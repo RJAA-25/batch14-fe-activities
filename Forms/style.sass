@@ -1,0 +1,259 @@
+@use "base"
+@use "display"
+@use "partitions"
+
+body
+    margin: 0
+    padding: 0
+    background-color: #1d3557
+    font-family: base.$font-stack
+
+main
+    width: 100%
+    height: 100vh
+    @extend %row-even-center
+
+// Design Content
+#design-container
+    width: 40%
+    height: 100%
+    position: relative
+    @extend %row-even-center
+
+.header
+    width: 100%
+    height: 30%
+    padding: 5%
+    position: absolute
+    top: 35%
+    box-sizing: border-box
+    color: grey
+    background-color: white
+    @extend %col-center-end
+
+    h1
+        margin: 0
+        font-size: 4em
+
+    span
+        color: #e63946
+
+    p
+        margin: 0
+        font-size: 2em
+
+.left
+    width: 50%
+    height: 100%
+
+.right
+    width: 50%
+    height: 100%
+    @extend %col-center-center
+
+.top, .bot
+    width: 100%
+    height: 50%
+
+img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+// Form Content
+#form-container
+    width: 70%
+    height: 100%
+    @extend %row-even-center
+
+.half
+    width: 45%
+    height: 100%
+    border-radius: 2em
+    @extend %col-even-center
+
+.profile
+    width: 100%
+    height: 30%
+    @extend %partition-section
+    @extend %row-center-center
+
+    fieldset
+        width: 500px
+        height: 250px
+        @extend %partition-fieldset
+        @extend %col-even
+
+    legend
+        @extend %partition-legend-red
+
+    label
+        margin: 0.5em 0
+        padding: 0.5em
+        @extend %row-between-center
+
+    input
+        width: 70%
+        height: 2em
+        border: none
+        border-bottom: 2px solid grey
+
+.contact
+    width: 100%
+    height: 30%
+    @extend %partition-section
+    @extend %row-center-center
+
+    fieldset
+        width: 500px
+        height: 250px
+        @extend %partition-fieldset
+        @extend %col-even
+
+    legend
+        @extend %partition-legend-red
+
+    label
+        margin: 0.5em 0
+        padding: 0.5em
+        @extend %row-between-center
+
+    input
+        width: 70%
+        height: 2em
+        border: none
+        border-bottom: 2px solid grey
+
+.address
+    width: 100%
+    height: 30%
+    @extend %partition-section
+    @extend %row-center-center
+
+    fieldset
+        width: 500px
+        height: 250px
+        @extend %partition-fieldset
+        @extend %col-center
+
+    legend
+        @extend %partition-legend-red
+
+    label
+        margin: 0.1em 0
+        padding: 0.5em
+        @extend %row-between-center
+
+    input
+        width: 60%
+        height: 1.5em
+        border: none
+        border-bottom: 2px solid grey
+
+.notification
+    width: 100%
+    height: 20%
+    @extend %partition-section
+    @extend %row-center-center
+
+    fieldset
+        width: 500px
+        height: 150px
+        font-size: 0.8em
+        @extend %partition-fieldset
+        @extend %col-even-start
+
+    legend
+        @extend %partition-legend-yellow
+        text-align: right
+
+.task
+    width: 100%
+    height: 60%
+    @extend %partition-section
+    @extend %row-center-center
+
+    fieldset
+        width: 500px
+        height: 550px
+        @extend %partition-fieldset
+        @extend %col-even
+
+    legend
+        @extend %partition-legend-red
+
+.difficulty
+    label
+        margin: 0.1em 0
+        padding: 0.5em
+        @extend %row-between-center
+
+        select
+            width: 60%
+            height: 1.5em
+            text-align: center
+            border: none
+            border-bottom: 2px solid grey
+
+.frequency
+    label
+        margin: 0.1em 0
+        padding: 0.5em
+        @extend %row-between-center
+
+    input
+        width: 60%
+        height: 1.5em
+        border: none
+        border-bottom: 2px solid grey
+
+.schedule
+    padding: 0.5em
+    box-sizing: border-box
+    @extend %row-even-center
+
+    span
+        width: 40%
+
+    div
+        width: 60%
+
+.startdate
+    label
+        margin: 0.1em 0
+        padding: 0.5em
+        @extend %row-between-center
+
+    input
+        width: 60%
+        height: 1.5em
+        border: none
+        border-bottom: 2px solid grey
+
+.experience
+    @extend %col-even
+
+    label
+        margin: 1em 0
+
+.submit
+    width: 100%
+    height: 10%
+    background-color: transparent
+
+    input
+        width: 100%
+        height: 100%
+        font-size: 2em
+        box-sizing: border-box
+        border-radius: 2em
+        background-color: grey
+        opacity: 0.5
+        transition: 0.25s
+
+    input:hover
+        color: white
+        background-color: #e63946
+        border: 5px solid white
+        opacity: 1
+        cursor: pointer

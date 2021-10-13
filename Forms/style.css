@@ -1,0 +1,315 @@
+main, #design-container, #form-container, .schedule {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile, .contact, .address, .notification, .task {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile label, .contact label, .address label, .difficulty label, .frequency label, .startdate label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile fieldset, .contact fieldset, .task fieldset, .experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.notification fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.half {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile, .contact, .address, .notification, .task {
+  font-size: 20px;
+  box-sizing: border-box;
+  border-radius: 2em;
+  background-color: white;
+}
+
+.profile fieldset, .contact fieldset, .address fieldset, .notification fieldset, .task fieldset {
+  padding: 5%;
+  box-sizing: border-box;
+  border: 5px dashed grey;
+  border-radius: 2em;
+}
+
+.profile legend, .contact legend, .address legend, .task legend {
+  color: white;
+  background-color: #e63946;
+  padding: 10px 20px;
+  border-radius: 2em;
+  letter-spacing: 1px;
+}
+
+.notification legend {
+  color: black;
+  background-color: #ffb703;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 2em;
+  letter-spacing: 1px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1d3557;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+
+#design-container {
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 30%;
+  padding: 5%;
+  position: absolute;
+  top: 35%;
+  box-sizing: border-box;
+  color: grey;
+  background-color: white;
+}
+.header h1 {
+  margin: 0;
+  font-size: 4em;
+}
+.header span {
+  color: #e63946;
+}
+.header p {
+  margin: 0;
+  font-size: 2em;
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+}
+
+.top, .bot {
+  width: 100%;
+  height: 50%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#form-container {
+  width: 70%;
+  height: 100%;
+}
+
+.half {
+  width: 45%;
+  height: 100%;
+  border-radius: 2em;
+}
+
+.profile {
+  width: 100%;
+  height: 30%;
+}
+.profile fieldset {
+  width: 500px;
+  height: 250px;
+}
+.profile label {
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+.profile input {
+  width: 70%;
+  height: 2em;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.contact {
+  width: 100%;
+  height: 30%;
+}
+.contact fieldset {
+  width: 500px;
+  height: 250px;
+}
+.contact label {
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+.contact input {
+  width: 70%;
+  height: 2em;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.address {
+  width: 100%;
+  height: 30%;
+}
+.address fieldset {
+  width: 500px;
+  height: 250px;
+}
+.address label {
+  margin: 0.1em 0;
+  padding: 0.5em;
+}
+.address input {
+  width: 60%;
+  height: 1.5em;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.notification {
+  width: 100%;
+  height: 20%;
+}
+.notification fieldset {
+  width: 500px;
+  height: 150px;
+  font-size: 0.8em;
+}
+.notification legend {
+  text-align: right;
+}
+
+.task {
+  width: 100%;
+  height: 60%;
+}
+.task fieldset {
+  width: 500px;
+  height: 550px;
+}
+.difficulty label {
+  margin: 0.1em 0;
+  padding: 0.5em;
+}
+.difficulty label select {
+  width: 60%;
+  height: 1.5em;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.frequency label {
+  margin: 0.1em 0;
+  padding: 0.5em;
+}
+.frequency input {
+  width: 60%;
+  height: 1.5em;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.schedule {
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+.schedule span {
+  width: 40%;
+}
+.schedule div {
+  width: 60%;
+}
+
+.startdate label {
+  margin: 0.1em 0;
+  padding: 0.5em;
+}
+.startdate input {
+  width: 60%;
+  height: 1.5em;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+
+.experience label {
+  margin: 1em 0;
+}
+
+.submit {
+  width: 100%;
+  height: 10%;
+  background-color: transparent;
+}
+.submit input {
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  box-sizing: border-box;
+  border-radius: 2em;
+  background-color: grey;
+  opacity: 0.5;
+  transition: 0.25s;
+}
+.submit input:hover {
+  color: white;
+  background-color: #e63946;
+  border: 5px solid white;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

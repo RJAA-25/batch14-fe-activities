@@ -1,0 +1,448 @@
+/* REFERENCES */
+/* https://www.biography.com/business-figure/elon-musk
+
+https://www.businessinsider.com/neuralink-elon-musk-microchips-brains-ai-2021-2#elon-musk-has-said-human-testing-could-start-by-the-end-of-this-year-but-he-also-said-that-last-year-8
+
+https://spectrum.ieee.org/elon-musk-neuralink-advance-brains-ai
+
+https://www.crunchbase.com/organization/the-boring-company 
+
+https://www.forbes.com/billionaires/
+ */
+
+
+body {
+    color: white;
+    /* background: linear-gradient(180deg, black, #003485 ); */
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.border {
+    width: 100%;
+    height: 200px;
+}
+
+
+
+
+
+/* HEADER CSS - START */
+#header {
+    width: 100%;
+    margin: none;
+    position: relative;
+}
+
+#header .background {
+    width: 100%;
+    margin: none;
+    position: relative;
+    z-index: 1;
+}
+
+#header img {
+    width: 100%;
+    height: auto;
+}
+
+#header .text {
+    width: auto;
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    left: 70%;
+    font-size: 2vw;
+}
+
+#title span {
+    color: yellow;
+}
+
+
+
+
+
+/* INTRO */
+#intro {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    padding-top: 1em ;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    line-height: 2em;
+    letter-spacing: 1px;
+    margin: auto;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+#intro .one
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: yellow;
+}
+
+#intro .two {
+    color: transparent;
+    transition: 0.2s;
+}
+
+#intro .two:hover {
+    color: grey;
+
+}
+
+
+
+
+
+/* TRIBUTE CONTENT - START */
+#tribute-info {
+    width: 100%;
+    height: 1080px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#tribute-info .tribute-top {
+    width: 80%;
+    height: 20%;
+    font-size: 5em;
+    text-decoration: underline;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#tribute-info .tribute-bot {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+#img-div {
+    width: 30%;
+    height: 100%;
+    padding: 2em;
+    color: black;
+    background-color: black;
+    box-sizing: border-box;
+    border: 5px solid black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-div .img-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+#img-div .img-caption:hover {
+    color: yellow;
+}
+
+#img-div img {
+    width: 50%;
+    height: auto    ;
+    border: 20px double white;
+    border-radius: 50%;
+}
+
+
+#img-div a {
+    color: black;
+    background-color: yellow;
+    font-size: 2em;
+    padding: 25px;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* border: 5px solid black; */
+    border-radius: 25px;
+    transition: 0.25s;
+    
+}
+
+#img-div a:hover {
+    background-color: white;
+    color: black;
+}
+
+#content-div {
+    width: 50%;
+    color: black;
+    background-color: White;
+    padding-left: 50px;
+    font-size: 40px;
+    box-sizing: border-box;
+    border: 5px solid grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+/* Net Worth - Start */
+#net-worth {
+    width: 100%;
+    height: 1080px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#net-worth::before {
+    content: "";
+    background-image: url(./images/netWorth.jfif);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0.5;
+}
+
+#net-worth .label {
+    font-weight: 800;
+    font-size: 5em;
+
+    position: relative;
+    color: white;
+}
+    
+#net-worth .value {
+    font-weight: 800;
+    font-size: 15em;
+    position: relative;
+    color: transparent;
+    transition: 0.5s ease-in-out;
+}
+
+#net-worth .value:hover {
+    color: yellow;
+}
+
+
+
+
+
+/* Elon Quote */
+#quote {
+    width: 100%;
+    height: 1080px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote .quote-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#quote .quote-line {
+    width: 80%;
+    height: 60%;
+    /* background-color: red; */
+    font-size: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#quote .quote-line .mark-1 {
+    color: black;
+    align-items: flex-start;
+}
+
+#quote .quote-line .line {
+    font-family: 'Open Sans', sans-serif;
+    color: transparent;
+    align-self: center;
+    transition: 0.5s ease-in-out;
+}
+
+#quote .quote-line .mark-2 {
+    color: black;
+    align-self: flex-end;
+}
+
+#quote .quote-line .line:hover {
+    color: black;
+}
+
+#quote .quote-elon {
+    width: 50%;
+    height: 30%;
+    color: black;
+    font-size: 4em;
+    /* background-color: blue; */
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+
+
+/* Companies-List */
+#companies-list {
+    width: 100%;
+    height: 1080px;
+    /* background-color: orange; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#companies-list .company {
+    width: 40%;
+    height: 90%;
+    color: black;
+    background-color: white;
+    font-size: 3em;
+    box-sizing: border-box;
+    border: 10px solid grey;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#companies-list .list {
+    width: 50%;
+    height: 90%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#companies-list .SpaceX {
+    width: 100%;
+    height: 20%;
+    font-size: 3em;
+    color: black;
+    background-color: yellow;
+    box-sizing: border-box;
+    border: 10px double black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#companies-list .SpaceX a {
+    text-decoration: none;
+    color: black;
+
+}
+
+
+#companies-list .Tesla {
+    width: 100%;
+    height: 20%;
+    font-size: 3em;
+    color: black;
+    background-color: yellow;
+    box-sizing: border-box;
+    border: 10px double black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#companies-list .Tesla a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#companies-list .Neuralink {
+    width: 100%;
+    height: 20%;
+    font-size: 3em;
+    color: black;
+    background-color: yellow;
+    box-sizing: border-box;
+    border: 10px double black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#companies-list .Neuralink a {
+text-decoration: none;
+color: black;
+}
+
+#companies-list .Boring {
+    width: 100%;
+    height: 20%;
+    font-size: 3em;
+    color: black;
+    background-color: yellow;
+    box-sizing: border-box;
+    border: 10px double black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#companies-list .Boring a {
+text-decoration: none;
+color: black;
+}
+
+#companies-list .SpaceX:hover {
+    background-color: white;
+}
+
+#companies-list .Tesla:hover {
+    background-color: white;
+}
+
+#companies-list .Neuralink:hover {
+    background-color: white;
+}
+
+#companies-list .Boring:hover {
+    background-color: white;
+}
