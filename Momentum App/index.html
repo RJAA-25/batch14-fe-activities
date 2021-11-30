@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/e25f2191a4.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="getDateTime();">
+
+    <div id="gridContainer">
+        <div id="cover">
+            <div id="dateTime">
+                <h2 id="date"></h2>
+                <h2 id="time"></h2>
+            </div>
+
+            <div id="greetingContainer">
+                <h1 id="greeting">Hey there! What's your name?</h1>
+                <input type="text" id="nameInput" placeholder="Name">
+                <button id="proceed"><i class="fas fa-arrow-circle-right"></i></button>
+                <!-- </div> -->
+            </div>
+
+            <div class="hidden" id="mainFocus">
+                <button id="addMainFocus">Add Main Focus</button>
+                <input type="text" id="mainFocusInput" class="hidden" placeholder="Main Focus for today">
+                <button id="setMainFocus" class="hidden"><i class="fas fa-arrow-circle-right"></i></button>
+            </div>
+        </div>
+
+        <div id="output" class="hidden">
+            <div id="totalTaskContainer">
+                <h2 id="totalTasks">No Tasks Available</h2>
+            </div>
+
+            <div id="completedContainer">
+                <h2>Completed Task List</h2>
+                <ul id="completed"></ul>
+            </div>
+
+            <div id="urgentContainer">
+                <h2>Urgent Task List</h2>
+                <ul id="urgent"></ul>
+            </div>
+
+            <div id="regularContainer">
+                <h2>Regular Task List</h2>
+                <ul id="regular"></ul>
+            </div>
+        </div>
+
+        <div id="input" class="hidden">
+
+            <div id="taskContainer">
+                <div id="createTask">
+                    <h2>Create Task:</h2>
+                    <input type="text" id="taskDetails" name="taskDetails" placeholder="Add To Do List">
+                    <button id="addTask"><i class="fas fa-plus-circle"></i></button>
+                </div>
+
+                <div id="classifyTask" class="hidden">
+                    <h2>Priority Status:</h2>
+                    <button id="taskUrgent">Urgent</button>
+                    <button id="taskRegular">Regular</button>
+                </div>
+            </div>
+
+            <div id="quotesContainer">
+                <h2 id="quote"></h2>
+                <input type="text" name="inputQuote" id="inputQuote" class="hidden" placeholder="Enter quote">
+                <button id="addInput" class="hidden"><i class="fas fa-sign-in-alt"></i></button>
+                <button id="cancelInput" class="hidden"><i class="fas fa-undo-alt"></i></button>
+                <button id="nextQuote"><i class="fas fa-arrow-circle-right"></i></button>
+                <button id="addQuote"><i class="fas fa-plus-circle"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="index.js"></script>
+    <script src="quoteEvents.js"></script>
+    <script src="taskCreation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #22223b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#gridContainer {
+    width: 95%;
+    height: 90%;
+}
+
+
+.mainLayout {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template: 60% 40% / 30% 70%;
+    grid-template-areas: 
+    "output cover"
+    "output input";
+}
+
+        #cover {
+            grid-area: cover;
+            width: 100%;
+            height: 100%;
+            background-image: url(./images/cover.jfif);
+            background-size: cover;
+            color: white;
+            border-radius: 1rem;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #dateTime {
+            height: 30%;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+        }
+                #date {
+                    font-size: 2em;
+                }
+
+                #time {
+                    font-size: 4em;
+                }
+        
+        #greetingContainer {
+            height: 30%;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+                #greeting {
+                    font-size: 3em;
+                }
+
+                #nameInput {
+                    width: 80%; 
+                    border: none;
+                    border-bottom: 5px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    color: white;
+                    font-size: 3em;
+                    text-align: center;
+                }
+
+                #nameInput:hover {
+                    cursor: pointer;
+                }
+
+                #proceed {
+                    font-size: 3em;
+                    color: rgba(255, 255, 255, 0.5);
+                    border: none;
+                    background-color: transparent;
+                    transition: 0.25s;
+                }
+
+                #proceed:hover {
+                    cursor: pointer;
+                    color: white;
+                }
+        
+        #mainFocus {
+            height: 20%;            
+            width:45%;
+            font-size: 1em;
+            position: relative;
+        }
+
+                #addMainFocus {
+                    width: 80%;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    font-size: 2em;
+                    padding: 0 0.5em;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.5);
+                    border: none;
+                    border: 5px solid transparent;
+                    border-radius: 1rem;
+                    background-color: transparent;
+                    transition: 0.25s;
+                }
+
+                #addMainFocus:hover {
+                    color: white;
+                    border: 5px solid white;
+                    cursor: pointer;
+                }
+
+                #mainFocusInput {
+                    font-size: 2em;
+                    border: none;
+                    border-bottom: 5px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    color: white;
+                    text-align: center;
+                    margin-right: 0.5em;
+                }
+
+                #setMainFocus {
+                    font-size: 2em;
+                    color: rgba(255, 255, 255, 0.5);
+                    border: none;
+                    background-color: transparent;
+                    transition: 0.25s;
+                }
+                #setMainFocus:hover {
+                    color: white;
+                    cursor: pointer;
+                }
+
+                #mainFocus li {
+                    font-size: 1em;
+                    width: 100%;
+                    display: grid;
+                    grid-template: 100% / 20% 60% 20%;
+                    place-items: stretch;
+                    background-color: rgba(73, 80, 87, 0.5);
+                }
+
+                #mainFocus li:hover {
+                    border: 1px solid white;
+                }
+                            #mainFocus li div:first-of-type {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;  
+                            }
+
+                            #mainFocus input[type="checkbox"] {
+                                transform: scale(2);
+                            }
+
+                            #mainFocus li div:nth-of-type(2){
+                                font-size: 1.5em;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;  
+                            }
+                            
+                            #mainFocus li div:last-of-type {
+                                display: grid;
+                                grid-template: 1fr 1fr 1fr / 1fr; 
+                            }
+
+                            #mainFocus button {
+                                border: none;
+                                opacity: 0.5;
+                            }
+
+                            #mainFocus button:hover {
+                                opacity: 1;
+                            }
+
+.outputLayout {
+    display: grid;
+    
+    grid-template: 10% 20px 1fr 20px 1fr 20px 1fr / 1fr;
+    grid-template-areas: 
+    "task"
+    "."
+    "complete"
+    "."
+    "urgent"
+    "."
+    "regular";
+}
+        #output {
+            grid-area: output;
+            font-size: 1em;
+        }
+
+                #totalTaskContainer {
+                    grid-area: task;
+                    background-image: url(./images/task.jfif);
+                    background-size: cover;
+                    border-radius: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white; 
+                    font-size: 1em;
+                }
+
+                #completedContainer {
+                    grid-area: complete;
+                    background-image: url(./images/completed.jfif);
+                    background-size: cover;
+                    border-radius: 1rem;
+                    padding: 2em;
+                    color: white;
+                    overflow-y: hidden;
+                }
+                        #completedContainer h2 {
+                            font-size: 2em;
+                        }
+
+                        #completed {
+                            width: 100%;
+                            height: 70%;
+                            margin-top: 1em;
+                            overflow-y: auto;
+                        }
+
+                        #completed li {
+                            font-size: 1em;
+                            padding: 1em 0;
+                            padding-left: 2em;
+                            background-color: rgba(73, 80, 87, 0.5);
+                        }
+
+                        #completed li:hover {
+                            border: 1px solid white;
+                        }
+
+                #urgentContainer {
+                    grid-area: urgent;
+                    background-image: url(./images/urgent.jfif);
+                    background-size: cover;
+                    border-radius: 1rem;
+                    padding: 2em;
+                    color: white;
+                    overflow-y: hidden;
+                }
+                        #urgentContainer h2 {
+                            font-size: 2em;
+                        }
+
+                        #urgent {
+                            width: 100%;
+                            height: 70%;
+                            margin-top: 1em;
+                            overflow-y: auto;
+                        }
+
+                        #urgent li {
+                            font-size: 1em;
+                            display: grid;
+                            grid-template: 100px / 20% 60% 20%;
+                            place-items: stretch;
+                            background-color: rgba(73, 80, 87, 0.5);
+                        }
+
+                        #urgent li:hover {
+                            border: 1px solid white;
+                        }
+                                    #urgent li div:first-of-type {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;  
+                                    }
+
+                                    #urgent input[type="checkbox"] {
+                                        transform: scale(2);
+                                    }
+                                    
+                                    #urgent li div:nth-of-type(2){
+                                        font-size: 1.1em;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;  
+                                    }
+                                    
+                                    #urgent li div:last-of-type {
+                                        display: grid;
+                                        grid-template: 1fr 1fr 1fr / 1fr; 
+                                    }
+
+                                    #urgent button {
+                                        border: none;
+                                        opacity: 0.5;
+                                    }
+
+                                    #urgent button:hover {
+                                        opacity: 1;
+                                    }
+                                            
+
+                #regularContainer {
+                    grid-area: regular;
+                    background-image: url(./images/regular.jfif);
+                    background-size: cover;
+                    border-radius: 1rem;
+                    padding: 2em;
+                    color: white;
+                    overflow-y: hidden;
+                }
+
+                        #regularContainer h2 {
+                            font-size: 2em;
+                        }
+
+                        #regular {
+                            width: 100%;
+                            height: 70%;
+                            margin-top: 1em;
+                            overflow-y: auto;
+                        }
+
+                        #regular li {
+                            font-size: 1em;
+                            display: grid;
+                            grid-template: 100px / 20% 60% 20%;
+                            place-items: stretch;
+                            background-color: rgba(73, 80, 87, 0.5);
+                        }
+
+                        #regular li:hover {
+                            border: 1px solid white;
+                        }
+                                    #regular li div:first-of-type {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;  
+                                    }
+
+                                    #regular input[type="checkbox"] {
+                                        transform: scale(2);
+                                    }
+
+                                    #regular li div:nth-of-type(2){
+                                        font-size: 1.1em;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: center;
+                                        align-items: center;  
+                                    }
+                                    
+                                    #regular li div:last-of-type {
+                                        display: grid;
+                                        grid-template: 1fr 1fr 1fr / 1fr; 
+                                    }
+
+                                    #regular button {
+                                        border: none;
+                                        opacity: 0.5;
+                                    }
+
+                                    #regular button:hover {
+                                        opacity: 1;
+                                    }
+.inputLayout {
+    display: grid;
+    grid-template: 1fr 20px 1fr / 1fr;
+    grid-template-areas:
+    "create"
+    "."
+    "quote";
+}
+
+        #input {
+            grid-area: input;
+        }
+        
+                #taskContainer {
+                    grid-area: create;
+                    color: white;
+                    background-image: url(./images/create.jfif);
+                    background-size: cover;
+                    border-radius: 1rem;
+                    font-size: 1em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                        .taskFlex {
+                            display: flex;
+                            justify-content: space-evenly;
+                            align-items: center;
+                        }
+
+                        #createTask {
+                            width: 90%;
+                            height: 90%;
+                        }
+
+                                #createTask h2 {
+                                    font-size: 2em;
+                                }   
+                                #taskDetails {
+                                    width: 60%;
+                                    font-size: 2em;
+                                    border: none;
+                                    border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+                                    background-color: transparent;
+                                    color: white;
+                                }
+
+                                #addTask {
+                                    font-size: 3em;
+                                    border: none;
+                                    background-color: transparent;
+                                    color:rgba(255, 255, 255, 0.5);
+                                    transition: 0.25s;
+                                }
+
+                                #addTask:hover {
+                                    color: white;
+                                    font-size: 4em;
+                                    cursor: pointer;
+                                }
+                        
+                        #classifyTask {
+                            width: 90%;
+                            height: 90%;
+                        }
+
+                                #classifyTask h2 {
+                                    font-size: 2em;
+                                }
+
+                                #taskUrgent {
+                                    font-size: 2em;
+                                    border: none;
+                                    border: 5px solid rgba(255, 255, 255, 0.5);
+                                    border-radius: 1em;
+                                    padding: 0.5em 2em;
+                                    background-color: transparent;
+                                    color:rgba(255, 255, 255, 0.5);
+                                    transition: 0.25s;
+                                }
+
+                                #taskUrgent:hover {
+                                    color: white;
+                                    border: 10px solid white;
+                                    cursor: pointer;
+                                }
+
+                                #taskRegular{
+                                    font-size: 2em;
+                                    border: none;
+                                    border: 5px solid rgba(255, 255, 255, 0.5);
+                                    border-radius: 1em;
+                                    padding: 0.5em 2em;
+                                    background-color: transparent;
+                                    color:rgba(255, 255, 255, 0.5);
+                                    transition: 0.25s;
+                                }
+
+                                #taskRegular:hover {
+                                    color: white;
+                                    border: 10px solid white;
+                                    cursor: pointer;
+                                }
+                        
+
+                #quotesContainer {
+                    grid-area: quote;
+                    background-image: url(./images/quote.jfif);
+                    background-size: cover;
+                    color: white;
+                    border-radius: 1rem;
+                    font-size: 1em;
+                    padding: 1em 2em;
+                }
+                        #quote {
+                            font-size: 2em;
+                            text-align: center;
+                        }
+
+                        #nextQuote {
+                            font-size: 2em;
+                            background-color: transparent;
+                            border: none;
+                            color:rgba(255, 255, 255, 0.5);
+                            margin-top: 1em;
+                            transition: 0.25s;
+                        }
+
+                        #nextQuote:hover {
+                            color: white;
+                            cursor: pointer;
+                        }
+                        #addQuote {
+                            font-size: 2em;
+                            background-color: transparent;
+                            border: none;
+                            color:rgba(255, 255, 255, 0.5);
+                            margin-top: 1em;
+                            transition: 0.25s;
+
+                        }
+                        #addQuote:hover {
+                            color: white;
+                            cursor: pointer;
+                        }
+
+                        #inputQuote {
+                            width: 80%;
+                            font-size: 2em;
+                            text-align: center;
+                            margin-top: 1em;
+                            /* margin-left: 50%; */
+
+                            border: none;
+                            border-bottom: 5px solid;
+                            background-color: transparent;
+                            color: white;
+                        }
+
+                        #addInput {
+                            font-size: 2em;
+                            border: none;
+                            background-color: transparent;
+                            color:rgba(255, 255, 255, 0.5);
+                            transition: 0.25s;
+                            margin: 0 1em;
+                        }
+                        #addInput:hover {
+                            font-size: 2.5em;
+                            color: white;
+                            cursor: pointer;
+                        }
+
+                        #cancelInput {
+                            font-size: 2em;
+                            border: none;
+                            background-color: transparent;
+                            color:rgba(255, 255, 255, 0.5);
+                            transition: 0.25s;
+                            margin: 0 1em;
+                        }
+                        #cancelInput:hover {
+                            color: white;
+                            font-size: 2.5em;
+                            cursor: pointer;
+                        }
+
+
+
+
+
+/* EFFECTS */
+.coverShrink {
+    transform: scale(0.7, 0.6);
+    transform-origin: top right;
+    transition: transform 0.5s 1s;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.line-through {
+    text-decoration: line-through;
+    text-decoration-color: white;
+    text-decoration-thickness: 3px;
+}

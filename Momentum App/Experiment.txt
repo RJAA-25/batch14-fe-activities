@@ -1,0 +1,71 @@
+// EXPERIMENT - SUCCESS
+
+// Classifies the priority status of task
+addTaskBtn.addEventListener("click", function () {
+    if (taskDetails.value !== "") {
+        createTask.classList.toggle("hidden");
+        classifyTask.classList.toggle("hidden");
+    }
+});
+
+
+
+//Creates the task as"urgent"
+taskUrgentBtn.addEventListener("click", function () {
+
+// Creates the list element
+const list = document.createElement("li");
+list.style.listStyle = "none";
+
+// Creates text container & store task details
+const textContainer = document.createElement("div");
+textContainer.classList.add("inline-block");
+textContainer.textContent = taskDetails.value;
+
+// Creates checkbox container & checkbox
+const checkboxContainer = document.createElement("div");
+checkboxContainer.classList.add("inline-block");
+const checkbox = document.createElement("input");
+checkbox.name = "checkbox";
+checkbox.setAttribute("type", "checkbox");
+checkboxContainer.append(checkbox);
+
+//Creates features conainter & features
+const featuresContainer = document.createElement("div");
+featuresContainer.classList.add("inline-block");
+
+// Remove
+const removeBtn = document.createElement("button");
+removeBtn.textContent = "Remove";
+removeBtn.name = "remove";
+
+// Edit
+const editBtn = document.createElement("button");
+editBtn.textContent = "Edit";
+editBtn.name = "edit"
+
+// Save
+const saveBtn = document.createElement("button");
+saveBtn.textContent = "Save";
+saveBtn.name = "save";
+saveBtn.classList.toggle("hidden");
+
+// Transfer
+const transferBtn = document.createElement("button");
+transferBtn.textContent = "Transfer";
+transferBtn.name = "transfer";
+transferBtn.disabled = true;
+
+featuresContainer.append(removeBtn, editBtn, saveBtn, transferBtn);
+
+// Append checkbox, text and features to list
+list.append(checkboxContainer, textContainer, featuresContainer);
+
+// Append list to Urgent List
+urgentList.append(list);
+
+    // Reset Task Input
+    taskDetails.value = "";
+    createTask.classList.toggle("hidden");
+    classifyTask.classList.toggle("hidden");
+});
